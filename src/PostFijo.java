@@ -47,20 +47,18 @@ public class PostFijo extends JFrame {
 		contentPane.setLayout(null);
 		
 		txtOperacion = new JTextField();
-		txtOperacion.setBounds(10, 45, 414, 20);
+		txtOperacion.setBounds(10, 45, 114, 20);
 		contentPane.add(txtOperacion);
 		txtOperacion.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("OPERACION");
+		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(100, 170, 500, 140);
 		contentPane.add(lblNewLabel);
 		JButton btnPostfijo = new JButton("Calcular");
 		btnPostfijo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Operaciones objOperaciones = new Operaciones();
-				//JOptionPane.showMessageDialog(null, objOperaciones.Postfijo(txtOperacion.getText()));
 				lblNewLabel.setText(objOperaciones.Postfijo(txtOperacion.getText()));
-				
 			}
 		});
 		btnPostfijo.setBounds(173, 87, 89, 23);
