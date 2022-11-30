@@ -15,18 +15,18 @@ public class Operaciones {
 		double indiceEntrada = 0;
 		switch (datos) {
 		case "^":
-			indiceEntrada = 1;
+			indiceEntrada = 10;
 			break;
 		case "(":
-			indiceEntrada = 4;
+			indiceEntrada = 40;
 			break;
 		case "*":
 		case "/":
-			indiceEntrada = 2;
+			indiceEntrada = 20;
 			break;
 		case "+":
 		case "-":
-			indiceEntrada = 3;
+			indiceEntrada = 30;
 			break;
 		default:
 			break;
@@ -41,13 +41,13 @@ public class Operaciones {
 			String pos;
 			pos = Character.toString(ubicacion);
 
-			if (ubicacion == '(') {
+			if (ubicacion == '(' || ubicacion == ' ') {
 
 				objpilas.push(pos);
 
-			} else if (ubicacion == ')') {
+			} else if (ubicacion == ')' || ubicacion == '(') {
 				String aux = objpilas.cima();
-				while (!aux.equals("(")) {
+				while (!aux.equals( "(")) {
 					OperacionFinal = OperacionFinal + objpilas.pop();
 					aux = objpilas.cima();
 				}
