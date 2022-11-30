@@ -51,8 +51,9 @@ public class PostFijo extends JFrame {
 		contentPane.add(txtOperacion);
 		txtOperacion.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("");
+		JLabel lblNewLabel = new JLabel(" ");
 		lblNewLabel.setBounds(100, 170, 500, 140);
+		lblNewLabel.setForeground(SystemColor.blue);
 		contentPane.add(lblNewLabel);
 		JButton btnPostfijo = new JButton("Calcular");
 		btnPostfijo.addActionListener(new ActionListener() {
